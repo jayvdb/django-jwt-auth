@@ -1,4 +1,7 @@
-from django.conf.urls import patterns
+try:
+    from django.conf.urls import patterns
+except ImportError:
+    def patterns(*args): return args
 
 from tests.views import MockView
 
